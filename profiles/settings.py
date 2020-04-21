@@ -23,7 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'j1b8tz8^fg*4o1#jg*rq^xw*ro2ljnc5ulo5h4zidqr48^if^1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True [Disable it while working on live server(AWS)]
+DEBUG = bool(int(os.environ.get(‘DEBUG’, 1)))
 
 ALLOWED_HOSTS = ['*']
 
@@ -125,3 +126,5 @@ STATIC_URL = '/static/'
 
 # Custom User Model followed by app Name
 AUTH_USER_MODEL ='profiles_api.UserProfile'
+
+STATIC_ROOT = 'static/'
