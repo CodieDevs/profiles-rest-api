@@ -5,7 +5,7 @@ set -e
 # TODO: Set to URL of git repo.
 PROJECT_GIT_URL='https://github.com/CodieDevs/profiles-rest-api.git'
 
-PROJECT_BASE_PATH='/Users/metvikz/courses/profiles-rest-api'
+PROJECT_BASE_PATH='/usr/local/apps/profiles-rest-api'
 
 echo "Installing dependencies..."
 apt-get update
